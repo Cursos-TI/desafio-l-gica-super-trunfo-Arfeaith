@@ -39,5 +39,7 @@ int main() {
     // Exemplo:
     // printf("A cidade vencedora é: %s\n", cidadeVencedora);
 
+
+    //Testing
     return 0;
 }
