@@ -14,7 +14,7 @@ int main() {
     // char estado[3] = "RJ";
     // char nome[50] = "Petropolis";
     // populacao = 12325000;
-    // area = 1521.11;
+    // area = 1521.11; 
     // pib = 699.28;
     // pontos_turisticos = 50;
 
@@ -184,17 +184,17 @@ int main() {
     case 3:
         printf("\nPrimeiro Atributo Carta 2 - PIB: \n");
         printf("%s (%s): %.2lf bilhões de reais\n", nome2, estado2, pib2);
-        parcelacarta2 = pib;
+        parcelacarta2 = pib2;
         break;
     case 4:
         printf("\nPrimeiro Atributo Carta 2 - Número de Pontos Turísticos: \n");
         printf("%s (%s): %d\n", nome2, estado2, pontos_turisticos2);
-        parcelacarta2 = pontos_turisticos;
+        parcelacarta2 = pontos_turisticos2;
         break;
     case 5:
         printf("\nPrimeiro Atributo Carta 2 - Densidade Populacional: \n");
         printf("%s (%s): %.2f\n", nome2, estado2, densidade2);
-        parcelacarta2 = densidade;
+        parcelacarta2 = densidade2;
         break;
     default:
         printf("\nOpção inválida.");
@@ -215,36 +215,50 @@ int main() {
     case 3:
         printf("\nSegundo Atributo Carta 2 - PIB: \n");
         printf("%s (%s): %.2lf bilhões de reais\n", nome2, estado2, pib2);
-        parcela2carta2 = pib;
+        parcela2carta2 = pib2;
         break;
     case 4:
         printf("\nSegundo Atributo Carta 2 - Número de Pontos Turísticos: \n");
         printf("%s (%s): %d\n", nome2, estado2, pontos_turisticos2);
-        parcela2carta2 = pontos_turisticos;
+        parcela2carta2 = pontos_turisticos2;
         break;
     case 5:
         printf("\nSegundo Atributo Carta 2 - Densidade Populacional: \n");
-        printf("%s (%s): %.2f\n", nome2, estado2, densidade2);
-        parcela2carta2 = densidade;
+        printf("%s (%s): %.2f", nome2, estado2, densidade2);
+        parcela2carta2 = densidade2;
         break;
     default:
         printf("\nOpção inválida.");
         break;
     }
 
+    //Demonstrando vencedor nos atributos individuais
+    if (parcela >= parcelacarta2)
+    {
+        (double) parcela == (double) parcelacarta2 ? printf("\nEmpate no primeiro atributo!\n") : printf("\nCarta 1 venceu no primeiro atributo!\n");
+    } else {
+        printf("\nCarta 2 venceu no primeiro atributo!\n");
+    }
+    if (parcela2 >= parcela2carta2)
+    {
+        (double) parcela2 == (double) parcela2carta2 ? printf("Empate no segundo atributo!") : printf("Carta 1 venceu no segundo atributo!");
+    } else {
+        printf("Carta 2 venceu no segundo atributo!");
+    }
+
     //Calculando e demonstrando total
     total = (double) parcela + (double) parcela2;
     total2 = (double) parcelacarta2 + (double) parcela2carta2;
 
-    printf("\nO total da Carta 1 é: %.2lf\n", total);
+    printf("\n\nO total da Carta 1 é: %.2lf\n", total);
     printf("O total da Carta 2 é: %.2lf\n\n", total2);
 
-    //Declarando vencedor
+    //Declarando vencedor da soma
     if (total >= total2)
     {
-        total == total2 ? printf("Empate!") : printf("Carta 1 venceu!");
+        total == total2 ? printf("Empate!") : printf("Carta 1 venceu a soma!");
     } else {
-        printf("Carta 2 venceu!");
+        printf("Carta 2 venceu a soma!");
     }
     }
 
